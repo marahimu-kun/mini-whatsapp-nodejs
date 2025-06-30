@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chat</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+
+    <body>
+        <h1>WhatsApp</h1>
+        <h2>Edit Chat</h2>
+        <h3>Editing chat with ID: <%= chat._id %>
+        </h3>
+        <form action="/chats/<%= chat._id %>?_method=PUT" method="POST">
+            <label>Sender:</label>
+            <input type="text" name="sender" value="<%= chat.sender %>" /><br />
+            <label>Receiver:</label>
+            <input type="text" name="receiver" value="<%= chat.receiver %>" /><br />
+            <label>Message:</label>
+            <textarea name="message" cols="30" rows="10"><%= chat.message %></textarea><br />
+            <button type="submit">Update</button>
+        </form>
+    </body>
+
+
+</body>
+
+</html>

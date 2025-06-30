@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <h1>WhatsApp</h1>
+    <h2>Send a New Message</h2>
+    <form method="POST" action="/chats">
+        <label>Sender:</label>
+        <input type="text" name="sender" placeholder="Your Name" required /><br />
+        <label>Receiver:</label>
+        <input type="text" name="receiver" placeholder="Recipient Name" required /><br />
+        <label>Message:</label>
+        <textarea name="message" placeholder="Type your message here..." required cols="30" rows="10"></textarea><br />
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+
+</html>

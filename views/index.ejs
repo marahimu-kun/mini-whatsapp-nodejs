@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini WhatsApp</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body>
+    <h1>WhatsApp</h1>
+    <h2>All Chats</h2>
+
+    <form method="GET" action="/chats/new">
+        <button type="submit">Send Message</button>
+    </form>
+
+    <% for (let chat of chats) { %>
+        <div class="chat">
+            <h4>From: <%= chat.sender %>
+            </h4>
+            <div class="message">
+                <p>
+                    <%= chat.message %>
+                </p>
+                <p>- <%= chat.timestamp.toString().split(" ")[4] %></p>
+            <p>- <%= chat.timestamp.toString().split(" ").slice(0, 4).join(" ") %></p>
+            <div>
+                <form style=" display: inline;" method="GET" action="/chats/<%= chat._id %>/edit">
+                        <button type="submit"">Edit</button>
+                        </form>
+                        <form action=" /chats/<%=chat._id %>/delete" method="POST" style="display: inline;"
+                            onsubmit="return confirm('This chat will be permanently deleted.');">
+                            <button type="submit">Delete</button>
+                            </form>
+            </div>
+        </div>
+        <h4>To: <%= chat.receiver %>
+        </h4>
+        <hr>
+        </div>
+        <% } %>
+</body>
+
+</html>
