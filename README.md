@@ -79,13 +79,15 @@ This project was built as a hands-on way to practice backend development using M
 ---
 
 ## 👤 Author
+
 Made by Your Name
 Built with ❤️ for learning and fun!
 
 ---
 
 ## 📜 License
-MIT License – feel free to use, modify, and share!
+
+MIT License
 
 
 
