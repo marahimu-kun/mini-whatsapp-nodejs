@@ -80,7 +80,7 @@ This project was built as a hands-on way to practice backend development using M
 
 ## 👤 Author
 
-Made by Your Name
+Made by marahimu_kun
 Built with ❤️ for learning and fun!
 
 ---
